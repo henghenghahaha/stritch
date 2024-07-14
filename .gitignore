@@ -1,6 +1,5 @@
 # Nuxt dev/build outputs
 .data
-.output
 .nuxt
 .nitro
 .cache
@@ -25,5 +24,7 @@ logs
 
 # VSC
 .history
+
+.vercel
 
 .vercel
