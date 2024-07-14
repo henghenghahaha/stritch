@@ -38,7 +38,7 @@ export default defineNuxtConfig({
     '/major': { prerender: true },
     '/course': { prerender: true },
     '/inquery': { prerender: true },
-    'dist': { prerender: true },
+    '/dist': { prerender: true },
     '/api/search.json': { prerender: false },
     '/docs': { redirect: '/docs/getting-started', prerender: false }
   },
