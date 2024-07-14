@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import type { NavItem } from '@nuxt/content'
-
-const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 
 const links = [{
   label: 'Home',
@@ -37,12 +34,6 @@ const links = [{
       />
     </template>
 
-    <template #panel>
-      <UNavigationTree
-        :links="mapContentNavigation(navigation)"
-        default-open
-      />
-    </template>
   </UHeader>
 </template>
 
