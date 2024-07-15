@@ -131,7 +131,7 @@ async function submitchange() {
         <UInput
           v-model="state.id"
           type="id"
-          placeholder="Enter your email"
+          placeholder="enter ID"
           :ui="{ icon: { trailing: { pointer: '' } } }"
           required
           size="xl"
