@@ -101,22 +101,43 @@ const onimgscoreChange = (event: Event) => {
 };
 
 async function submitchange() {
-  await supabase.from('stritch').update({
-    "datebirth" : statedata.datebirth,
-    "dateofattendence" : statedata.dateofattendence,
-    "dateofgraduation" : statedata.dateofgraduation,
-    "degree" : statedata.degree,
-    "gender" : statedata.gender,
-    "gpa" : statedata.gpa,
-    "id" : statedata.id,
-    "imgperson" : statedata.imgperson,
-    "imgscore" : statedata.imgscore,
-    "major" : statedata.major,
-    "name" : statedata.name,
-    "nationality" : statedata.nationality,
-    "registrationnumber" : statedata.registrationnumber,
-    "totalcredits" : statedata.totalcredits,
-  }).eq("id",statedata.id)
+  const { data } = await supabase.from('stritch').select().eq("id",statedata.id)
+  if (data.length == 0) {
+    await supabase.from('stritch').insert({
+      "datebirth" : statedata.datebirth,
+      "dateofattendence" : statedata.dateofattendence,
+      "dateofgraduation" : statedata.dateofgraduation,
+      "degree" : statedata.degree,
+      "gender" : statedata.gender,
+      "gpa" : statedata.gpa,
+      "id" : statedata.id,
+      "imgperson" : statedata.imgperson,
+      "imgscore" : statedata.imgscore,
+      "major" : statedata.major,
+      "name" : statedata.name,
+      "nationality" : statedata.nationality,
+      "registrationnumber" : statedata.registrationnumber,
+      "totalcredits" : statedata.totalcredits,
+    }).eq("id",statedata.id)
+  }else{
+    await supabase.from('stritch').update({
+      "datebirth" : statedata.datebirth,
+      "dateofattendence" : statedata.dateofattendence,
+      "dateofgraduation" : statedata.dateofgraduation,
+      "degree" : statedata.degree,
+      "gender" : statedata.gender,
+      "gpa" : statedata.gpa,
+      "id" : statedata.id,
+      "imgperson" : statedata.imgperson,
+      "imgscore" : statedata.imgscore,
+      "major" : statedata.major,
+      "name" : statedata.name,
+      "nationality" : statedata.nationality,
+      "registrationnumber" : statedata.registrationnumber,
+      "totalcredits" : statedata.totalcredits,
+    }).eq("id",statedata.id)
+  }
+
   clearstate()
   toast.add({ title: 'Submit Success!!'})
 }
@@ -171,6 +192,10 @@ async function submitchange() {
           <UFormGroup class="field">
             <p>Date of Birth</p>
             <UInput v-model="statedata.datebirth" />
+          </UFormGroup>
+          <UFormGroup class="field">
+            <p>Gender</p>
+            <UInput v-model="statedata.gender" />
           </UFormGroup>
           <UFormGroup class="field">
             <p>Nationality</p>

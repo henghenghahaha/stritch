@@ -28,7 +28,6 @@ function replaceSpacesWithHyphens(input: string): string {
 async function getrecord(id) {
   const { data } = await supabase.from('stritch').select().eq("id",id)
   record.value = data;
-  console.log(record.value[0],'312312312')
   if (record.value.length > 0){
     toast.add({ title: 'Inquery Success!!'})
     recorddeatil.value = JSON.stringify(
