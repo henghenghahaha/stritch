@@ -66,6 +66,10 @@ const posts = [
 
 <template>
   <img src="/Library.jpg">
+  <p class="college-info1">
+    Cardinal Stritch University has several colleges covering more than 60 fields of study with a full range of Bachelor's, Master's and Doctoral degree programmes for students.<br>
+    For example, the College of Business and Management, the College of Education and Leadership, the College of Arts and Sciences, and Ruth S.Coleman of Nursing and Health Sciences, etc.<br>
+  </p>
   <UContainer>
     <UPageBody>
       <UBlogList>
@@ -79,4 +83,73 @@ const posts = [
       </UBlogList>
     </UPageBody>
   </UContainer>
+  <p class="college-info">
+    Cardinal Stritch University is proud of its management and teaching staff. Full-time and part-time staff include highly qualified and experienced individuals in their respective fields. <br>
+    More than half of the full-time faculty hold terminal degrees in their respective fields, most of which are doctoral degrees. Many faculty members have national reputations for their professional accomplishments and creative talents. <br>
+    Unlike large institutions of higher education, Cardinal Stritch University does not employ graduate assistants as instructors, so students benefit from direct access to faculty in all classes.
+  </p>
 </template>
+
+<style>
+.college-info {
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #2c3e50;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid #3498db;
+  margin-top: 10px;
+}
+
+
+.college-info p {
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.college-info p::first-letter {
+  font-size: 3em;
+  font-weight: 700;
+  float: left;
+  line-height: 1;
+  padding-right: 15px;
+  color: #3498db;
+}
+
+.college-info1 {
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #2c3e50;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 5px solid #3498db;
+  margin-top: 10px;
+}
+
+
+.college-info1 p {
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.college-info1 p::first-letter {
+  font-size: 3em;
+  font-weight: 700;
+  float: left;
+  line-height: 1;
+  padding-right: 15px;
+  color: #3498db;
+}
+</style>

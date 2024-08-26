@@ -62,7 +62,7 @@ const links = [{
     </template>
     <template #center>
       <p class="text-gray-500 dark:text-white text-sm">
-        © {{ new Date().getFullYear() }} Holy Family College.
+        © {{ new Date().getFullYear() }} Cardinal Stritch University.
       </p>
     </template>
   </UFooter>

@@ -3,6 +3,7 @@
 </script>
 
 <template>
+  <img style="width: 1920px" src="/Stritch.jpg" />
   <div class="about-us-container">
 
     <div class="content-section">

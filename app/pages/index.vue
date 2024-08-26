@@ -33,7 +33,7 @@ const page = {
 
 <template>
   <div v-if="page">
-    <img class="imageplaceholder" src="/Stritch.jpg" />
+    <img class="imageplaceholder" src="/img.png" />
 <!--    <div class="container2">-->
 <!--      <div class="stat-item">-->
 <!--        <div class="stat-number">1885</div>-->
