@@ -34,8 +34,8 @@ const page = {
 <template>
   <div v-if="page">
     <UContainer>
-      <img class="imageplaceholder mx-8" src="/img.png" />
-      <img class="imageplaceholder1 mx-8" src="/Transcripts.jpg" />
+      <img src="/img.png" />
+      <img src="/Transcripts.jpg" />
       <div class="flex flex-wrap mx-2 mt-5">
         <div class="w-full h-1/2 sm:w-1/3 px-2 mb-4" >
           <img
