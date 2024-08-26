@@ -3,26 +3,29 @@
 </script>
 
 <template>
-  <img style="width: 1920px" src="/Stritch.jpg" />
-  <div class="about-us-container">
+  <UContainer>
+    <img style="width: 1920px" src="/Stritch.jpg" />
+    <div class="about-us-container">
 
-    <div class="content-section">
+      <div class="content-section">
 
-      <div class="text-block">
-        <h1>Our History</h1>
-        <p>Cardinal Stritch University has several colleges covering more than 60 fields of study with a full range of Bachelor's, Master's and Doctoral degree programmes for students.<br><br>
-          For example, the College of Business and Management, the College of Education and Leadership, the College of Arts and Sciences, and Ruth S.Coleman of Nursing and Health Sciences, etc.<br><br>
-          Cardinal Stritch University is proud of its management and teaching staff. Full-time and part-time staff include highly qualified and experienced individuals in their respective fields. <br><br>
-          More than half of the full-time faculty hold terminal degrees in their respective fields, most of which are doctoral degrees. Many faculty members have national reputations for their professional accomplishments and creative talents. <br><br>
-          Unlike large institutions of higher education, Cardinal Stritch University does not employ graduate assistants as instructors, so students benefit from direct access to faculty in all classes.</p>
+        <div class="text-block">
+          <h1>Our History</h1>
+          <p>Cardinal Stritch University has several colleges covering more than 60 fields of study with a full range of Bachelor's, Master's and Doctoral degree programmes for students.<br><br>
+            For example, the College of Business and Management, the College of Education and Leadership, the College of Arts and Sciences, and Ruth S.Coleman of Nursing and Health Sciences, etc.<br><br>
+            Cardinal Stritch University is proud of its management and teaching staff. Full-time and part-time staff include highly qualified and experienced individuals in their respective fields. <br><br>
+            More than half of the full-time faculty hold terminal degrees in their respective fields, most of which are doctoral degrees. Many faculty members have national reputations for their professional accomplishments and creative talents. <br><br>
+            Unlike large institutions of higher education, Cardinal Stritch University does not employ graduate assistants as instructors, so students benefit from direct access to faculty in all classes.</p>
+        </div>
+
+        <!--      <div class="image-divider">-->
+        <!--        <img src="/history.jpg" alt="Historical photo of Holy Family College" />-->
+        <!--      </div>-->
+
       </div>
-
-<!--      <div class="image-divider">-->
-<!--        <img src="/history.jpg" alt="Historical photo of Holy Family College" />-->
-<!--      </div>-->
-
     </div>
-  </div>
+  </UContainer>
+
 </template>
 
 <style scoped>

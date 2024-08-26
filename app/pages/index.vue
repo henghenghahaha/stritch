@@ -33,46 +33,30 @@ const page = {
 
 <template>
   <div v-if="page">
-    <img class="imageplaceholder" src="/img.png" />
-<!--    <div class="container2">-->
-<!--      <div class="stat-item">-->
-<!--        <div class="stat-number">1885</div>-->
-<!--        <div class="stat-label">Establishment</div>-->
-<!--      </div>-->
-<!--      <div class="stat-item">-->
-<!--        <div class="stat-number">100+</div>-->
-<!--        <div class="stat-label">Academic programmes</div>-->
-<!--      </div>-->
-<!--      <div class="stat-item">-->
-<!--        <div class="stat-number">300+</div>-->
-<!--        <div class="stat-label">Teachers</div>-->
-<!--      </div>-->
-<!--      <div class="stat-item">-->
-<!--        <div class="stat-number">4000+</div>-->
-<!--        <div class="stat-label">Global Students</div>-->
-<!--      </div>-->
-<!--    </div>-->
-    <img class="imageplaceholder1" src="/Transcripts.jpg" />
-    <div class="flex flex-wrap mx-2 mt-5">
-      <div class="w-full h-1/2 sm:w-1/3 px-2 mb-4" >
-        <img
-          src="/Stritch_Campus_1.jpg"
-          class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-        />
+    <UContainer>
+      <img class="imageplaceholder mx-8" src="/img.png" />
+      <img class="imageplaceholder1 mx-8" src="/Transcripts.jpg" />
+      <div class="flex flex-wrap mx-2 mt-5">
+        <div class="w-full h-1/2 sm:w-1/3 px-2 mb-4" >
+          <img
+            src="/Stritch_Campus_1.jpg"
+            class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+          />
+        </div>
+        <div class="w-full h-1/2 sm:w-1/3 px-2 mb-4">
+          <img
+            src="/Stritch_Campus_2.jpg"
+            class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+          />
+        </div>
+        <div class="w-full h-1/2 sm:w-1/3 px-2 mb-4">
+          <img
+            src="/Stritch_Campus_3.jpg"
+            class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+          />
+        </div>
       </div>
-      <div class="w-full h-1/2 sm:w-1/3 px-2 mb-4">
-        <img
-          src="/Stritch_Campus_2.jpg"
-          class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-        />
-      </div>
-      <div class="w-full h-1/2 sm:w-1/3 px-2 mb-4">
-        <img
-          src="/Stritch_Campus_3.jpg"
-          class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-        />
-      </div>
-    </div>
+    </UContainer>
 
     <ULandingSection
       v-for="(section, index) in page.sections"
@@ -96,13 +80,7 @@ const page = {
 
 <style scoped>
 
-.imageplaceholder {
-  width: 1920px;
-}
 
-.imageplaceholder1 {
-  width: 1920px;
-}
 
 .container {
   border-radius: 10px;

@@ -65,12 +65,13 @@ const posts = [
 </script>
 
 <template>
-  <img src="/Library.jpg">
-  <p class="college-info1">
-    Cardinal Stritch University has several colleges covering more than 60 fields of study with a full range of Bachelor's, Master's and Doctoral degree programmes for students.<br>
-    For example, the College of Business and Management, the College of Education and Leadership, the College of Arts and Sciences, and Ruth S.Coleman of Nursing and Health Sciences, etc.<br>
-  </p>
+
   <UContainer>
+    <img src="/Library.jpg">
+    <p class="college-info1">
+      Cardinal Stritch University has several colleges covering more than 60 fields of study with a full range of Bachelor's, Master's and Doctoral degree programmes for students.<br>
+      For example, the College of Business and Management, the College of Education and Leadership, the College of Arts and Sciences, and Ruth S.Coleman of Nursing and Health Sciences, etc.<br>
+    </p>
     <UPageBody>
       <UBlogList>
         <UBlogPost
