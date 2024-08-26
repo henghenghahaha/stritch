@@ -1,6 +1,7 @@
 <script setup lang="ts">
+
 const page = {
-  "title": "Stritch University",
+  "title": "Cardinal Stritch University",
   "description": "",
   "navigation": "False",
   "hero": {
@@ -8,49 +9,23 @@ const page = {
   },
   "sections": [
     {
-      "title": "GREAT HALL",
-      "description": "The Great Hall at Stritch University stands as a testament to the institution's " +
-        "commitment to fostering a vibrant and inclusive community. This grand and elegant space, " +
-        "with its high vaulted ceilings and stunning architectural details, serves as the heart of " +
-        "the university's social and academic life. The hall is adorned with beautiful chandeliers " +
-        "that cast a warm, inviting glow over the polished wooden floors and intricately designed walls.",
+      "title": "Bonaventure Hall",
+      "description": "Bonaventure Hall is the University’s main administration building. The first floor houses the following major offices: President, Admissions, Academic Affairs, Accounts Receivable, Financial Aid, International Education, Registrar’s Office, University Advancement, Office of University Communications, Office of University Marketing, Information Services, Student Support, Academic Advising as well as the offices of the Dean of Students and the Vice President for Student Affairs. Additionally, the Sister Camille Kliebhan Conference Center is located on the first floor. The second floor is home to Human Resources, Accounts Payable, the St. Francis of Assisi Chapel, a nursing skills lab and a suite of offices for faculty members. Offices for Experiential Learning and Career Education, Security, and Math/Computer Science are located in the lower level, as well as computer labs, classrooms and the IT Helpdesk. ",
+      "align": "right",
+      "img": "/Bonaventure Hall.jpg"
+    },
+    {
+      "title": "The University Library",
+      "description": "The University Library seeks to provide welcoming places to satisfy a diversity of needs from individual study to group collaboration to virtual learning environments. Two levels of abundant resources for study and research are located in the Stritch library, along with computer, printers, copiers and collaborative or small group spaces. ",
       "id": "features",
-      "img": "/greathall.png",
+      "img": "/The University Library.jpeg",
       "align": "left"
     },
     {
-      "title": "BONAVENTURE HALL",
-      "description": "Bonaventure Hall is a cornerstone of Stritch University, embodying the spirit of academic " +
-        "excellence and community engagement. As one of the primary buildings on campus, Bonaventure " +
-        "Hall serves as a central hub for a variety of academic and administrative functions, playing " +
-        "a crucial role in the daily life of our students, faculty, and staff.",
+      "title": "The Fieldhouse",
+      "description": "Stritch’s gymnasium, indoor running track and fitness center are all located in the Fieldhouse, as is the Office of the Athletic Director.",
       "align": "right",
-      "img": "/BONAVENTUREHALL.png"
-    },
-    {
-      "title": "LIBRARY",
-      "description": "Welcome to the Stritch University Library, a vibrant hub of learning and research at the heart " +
-        "of our campus. Our library is dedicated to providing a welcoming and resource-rich environment " +
-        "that supports the academic and personal growth of our students, faculty, and staff.",
-      "align": "left",
-      "img": "/LIBRARY.png"
-    },
-    {
-      "title": "CAMPUS CENTER",
-      "description": "The Campus Center at Stritch University serves as the heart of student life and a central hub " +
-        "for the university community. This vibrant space is designed to foster a sense of belonging and " +
-        "engagement among students, faculty, and staff.",
-      "align": "right",
-      "img": "/CAMPUSCENTER.png"
-    },
-    {
-      "title": "CONFERENCE CENTER",
-      "description": "The Stritch University Conference Center is a premier venue designed to host a wide range of " +
-        "events, from academic conferences and corporate meetings to social gatherings and workshops. " +
-        "Nestled within the picturesque campus of Stritch University, the center offers state-of-the-art " +
-        "facilities, exceptional services, and a serene environment conducive to productive and memorable events.",
-      "align": "left",
-      "img": "/CONFERENCECENTER.png"
+      "img": "/The Fieldhouse.jpeg"
     }
   ]
 }
@@ -58,18 +33,46 @@ const page = {
 
 <template>
   <div v-if="page">
-    <ULandingHero
-      :title="page.hero.title"
-      :ui="{title: 'text-3xl font-serif font-semibold tracking-tight text-gray-900 dark:text-white sm:text-7xl'}"
-    >
-      <div
-        class="absolute inset-0 landing-grid z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"/>
-
-    </ULandingHero>
-
-    <ULandingSection class="!pt-0">
-      <ImagePlaceholder/>
-    </ULandingSection>
+    <img class="imageplaceholder" src="/Stritch.jpg" />
+<!--    <div class="container2">-->
+<!--      <div class="stat-item">-->
+<!--        <div class="stat-number">1885</div>-->
+<!--        <div class="stat-label">Establishment</div>-->
+<!--      </div>-->
+<!--      <div class="stat-item">-->
+<!--        <div class="stat-number">100+</div>-->
+<!--        <div class="stat-label">Academic programmes</div>-->
+<!--      </div>-->
+<!--      <div class="stat-item">-->
+<!--        <div class="stat-number">300+</div>-->
+<!--        <div class="stat-label">Teachers</div>-->
+<!--      </div>-->
+<!--      <div class="stat-item">-->
+<!--        <div class="stat-number">4000+</div>-->
+<!--        <div class="stat-label">Global Students</div>-->
+<!--      </div>-->
+<!--    </div>-->
+    <img class="imageplaceholder1" src="/Transcripts.jpg" />
+    <div class="flex flex-wrap mx-2 mt-5">
+      <div class="w-full h-1/2 sm:w-1/3 px-2 mb-4" >
+        <img
+          src="/Stritch_Campus_1.jpg"
+          class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+        />
+      </div>
+      <div class="w-full h-1/2 sm:w-1/3 px-2 mb-4">
+        <img
+          src="/Stritch_Campus_2.jpg"
+          class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+        />
+      </div>
+      <div class="w-full h-1/2 sm:w-1/3 px-2 mb-4">
+        <img
+          src="/Stritch_Campus_3.jpg"
+          class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+        />
+      </div>
+    </div>
 
     <ULandingSection
       v-for="(section, index) in page.sections"
@@ -77,12 +80,12 @@ const page = {
       :title="section.title"
       :description="section.description"
       :align="section.align"
+      :ui="{wrapper: 'py-8 sm:py-8'}"
     >
       <div class="container">
         <img class="image" :src=section.img alt="Cardinal Stritch University">
       </div>
     </ULandingSection>
-
     <ULandingSection>
       <div class="container1">
         <img class="image1" src="/Faith_08_1200X500-1536x640.jpg" alt="Cardinal Stritch University">
@@ -92,28 +95,25 @@ const page = {
 </template>
 
 <style scoped>
-.landing-grid {
-  background-size: 100px 100px;
-  background-image: linear-gradient(to right, rgb(var(--color-gray-200)) 1px, transparent 1px),
-  linear-gradient(to bottom, rgb(var(--color-gray-200)) 1px, transparent 1px);
+
+.imageplaceholder {
+  width: 1920px;
 }
 
-.dark {
-  .landing-grid {
-    background-image: linear-gradient(to right, rgb(var(--color-gray-800)) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(var(--color-gray-800)) 1px, transparent 1px);
-  }
+.imageplaceholder1 {
+  width: 1920px;
 }
 
 .container {
-  background-color: white;
-  border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   max-width: 600px;
   position: relative;
+}
+
+.container1 {
+  border-radius: 10px;
 }
 
 .image {
@@ -123,22 +123,42 @@ const page = {
   border-radius: 10px;
 }
 
-.container1 {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+.container2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1900px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 1200px;
-  position: relative;
+  height: 200px;
+  background-color: rgb(20,50,150);
 }
 
-.image1 {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 10px;
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  color: #FFFFFF;
 }
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .container2 {
+    flex-direction: column;
+  }
+  .stat-item {
+    margin-bottom: 30px;
+  }
+}
+
 </style>
 
